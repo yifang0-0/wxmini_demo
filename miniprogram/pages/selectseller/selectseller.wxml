@@ -9,7 +9,7 @@
     <input type="text" placeholder="输入卖家的关键词" confirm-type="search"></input>
   </view>
   <view class="action">
-    <button class="cu-btn bg-cyan shadow-blur round">搜索</button>
+    <button class="F">搜索</button>
   </view>
 </view>
 
