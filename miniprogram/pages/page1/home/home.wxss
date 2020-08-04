@@ -4,11 +4,10 @@
   margin-left: calc(var(--left) * 100rpx - 150rpx);
   z-index: var(--index);
 }
+.cu-custom{
+height:34px;
+}
 .primary-release{
   color: rgb(48, 206, 158);
   border: rgb(48, 206, 158);
-}
-.action-botton-universe-mini
-{
-  border 
 }

@@ -8,13 +8,14 @@
         "pages/sellerhome/sellerhome",
         "pages/complainseller/complainseller",
         "pages/gemmology/gemmology",
-        "pages/release/release"
+        "pages/release-brand/release-brand",
+        "pages/release-series/release-series"
     ],
     "window": {
         "backgroundColor": "#F6F6F6",
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#F6F6F6",
-        "navigationBarTitleText": "Luxury Forever",
+        "navigationBarTitleText": "APP's Name",
         "navigationBarTextStyle": "black",
         "navigationStyle": "custom"
     },

@@ -1,0 +1,7 @@
+<cu-custom bgColor="bg-black" isCustom="{{true}}"><view slot="content">选择系列</view>
+</cu-custom>
+<view class="grid col-4 ">
+  <view class="margin-tb-sm text-center" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}">
+    <button class="cu-btn  line-gray shadow">{{item.title}}</button>
+  </view>
+</view>
