@@ -7,17 +7,20 @@ Page({
       icon: 'search',
       color: 'cyan',
       badge: 0,
-      name: '查询鉴别'
+      name: '查询鉴别',
+      url: '../gemmologist/gemmologist'
     }, {
       icon: 'friend',
       color:'cyan',
       badge: 1,
-      name: '鉴别师'
+      name: '鉴别师',
+      url: '../gemmologist/gemmologist'
     }, {
       icon: 'sort',
       color: 'cyan',
       badge: 9,
-      name: '我的鉴别'
+      name: '我的鉴别',
+      url: '../gemmologist/gemmologist'
     }, {
       icon: 'noticefill',
       color: 'olive',
