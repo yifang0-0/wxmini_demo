@@ -1,4 +1,5 @@
 <!--pages/page1.wxml-->
+ <!-- 上端头衔 -->
 <cu-custom bgColor="bg-black" isCustom="{{true}}"><view slot="content">APP名称</view>
  
 </cu-custom>
@@ -12,10 +13,14 @@
   </view>
 </view>
 
-<view class="padding solid ">
-  <button class="cu-btn bg-cayan lg" role="button">发布鉴定</button>
+<!-- 发布鉴定 -->
+<view class="padding flex flex-direction">
+  <navigator class="content" hover-class="none" url="../selectseller/selectseller" open-type="navigate">
+    <button class="cu-btn lg">发布鉴定</button>
+  </navigator>
 </view>
 
+<!-- 滚轮式广告栏 -->
  <swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="rgb(28,187,180)">
   <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
     <view class="swiper-item">
@@ -25,21 +30,24 @@
   </swiper-item>
 </swiper>
 
-  <view class="cu-list grid col-3 ">
-    <view class="cu-item" wx:for="{{iconList}}" wx:key wx:if="{{index<gridCol}}">
-      <view class="cuIcon-{{item.icon}} text-{{item.color}}">
-        <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
-          <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
-        </view>
+<!-- 选择栏 -->
+<view class="cu-list grid col-3 ">
+  <navigator class="cu-item" wx:for="{{iconList}}" wx:if="{{index<gridCol}}" hover-class="none" url="{{item.url}}" open-type="navigate">
+    <view class="cuIcon-{{item.icon}} text-{{item.color}}">
+      <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+        <block wx:if="{{item.badge!=1}}">{{item.badge>99?"99+":item.badge}}</block>
       </view>
-      <text>{{item.name}}</text>
     </view>
-  </view>
-
-<view class="flex padding  justify-center " id="censor-exist">
-  <button class="cu-btn round lines-cyan " role="button" ariadisabled="false">鉴定师入口</button>
+    <text>{{item.name}}</text>
+  </navigator>
 </view>
 
+<!-- 鉴定师入口（后需判断用户身份） -->
+<view class="flex padding  justify-center " id="censor-exist">
+  <navigator class="cu-btn round lines-cyan " role="button" ariadisabled="false" hover-class="none" url="../gemmologist/gemmologist" open-type="navigate">鉴定师入口</navigator>
+</view>
+
+<!-- 鉴定须知 -->
 <view class="cu-bar bg-white ">
   <view class='action'>
     <text class='cuIcon-titles text-orange '></text> 鉴定须知
