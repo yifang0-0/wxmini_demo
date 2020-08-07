@@ -15,3 +15,4 @@ height:34px;
 .grid.col-3>navigator{
 	width: 33.33%;
 }
+
