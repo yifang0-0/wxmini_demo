@@ -1,0 +1,14 @@
+/* pages/gemmologisthome/gemmologisthome.wxss */
+.grid.col-2.grid-square>navigator {
+	padding-bottom: calc((100% - 20rpx)/2);
+	height: 0;
+	width: calc((100% - 20rpx)/2);
+}
+
+.grid.grid-square>navigator {
+	margin-right: 10rpx;
+	margin-bottom: 20rpx;
+	border-radius: 10rpx;
+	position: relative;
+	overflow: hidden;
+}

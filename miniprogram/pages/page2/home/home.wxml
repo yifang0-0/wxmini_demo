@@ -24,7 +24,7 @@
 
 <!-- 已关注卖家页面内容 -->
 <view wx:if="{{TabCur=='0'}}" class="cu-list menu-avatar">
-  <view class="cu-item ">
+  <view class="cu-item">
     <view class="cu-avatar radius lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
     <navigator class="content" hover-class="none" url="../selectseller/selectseller" open-type="navigate">
       <view class="text-pink">

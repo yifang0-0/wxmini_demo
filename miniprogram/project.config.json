@@ -32,7 +32,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.12.0",
-	"appid": "wx850a18e9bc7a9973",
+	"appid": "wx745b7aa2875256b6",
 	"projectname": "miniprogram-1",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -77,6 +77,19 @@
 					"name": "pages/release-series/release-series",
 					"pathName": "pages/release-series/release-series",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/gemmologistshow/gemmologistshow",
+					"pathName": "pages/gemmologistshow/gemmologistshow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/gemmologisthome/gemmologisthome",
+					"pathName": "pages/gemmologisthome/gemmologisthome",
 					"scene": null
 				}
 			]
