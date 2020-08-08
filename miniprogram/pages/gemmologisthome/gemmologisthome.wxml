@@ -1,0 +1,30 @@
+<!--pages/gemmologisthome/gemmologisthome.wxml-->
+<!-- 顶部自定义 -->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isCustom="{{true}}"><view slot="content">鉴定师主页</view></cu-custom>
+
+<!-- 鉴定师描述 -->
+<view class="bg-img bg-mask padding-tb-xl" style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg');height: 414rpx;">
+  <view class="padding-l text-white">
+    <view class="flex solid-bottom align-center" style="padding-left:38%">
+      <view class="cu-avatar xl round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg);"></view>
+      <view class="text-shadow text-xxl padding-sm margin-xs">alice</view>
+    </view>
+
+    <view class="padding-xl">
+      可鉴定：猫猫狗狗
+    </view>
+  </view>
+</view>
+
+<!-- 近期鉴定 -->
+<view class="padding-top-xs text-center text-xs text-cyan">近期鉴定</view>
+<view class="padding-left padding-right padding-top-xs">
+  <view class="grid col-2 grid-square"> 
+    <navigator class="padding bg-white" wx:for="{{things}}" hover-class="none" url="{{item.url}}" open-type="navigate">
+      <view class="flex solid-bottom align-center">
+        <view class="bg-img bg-mask padding-tb-xl" style="{{item.img}}; width:100%; padding-top:200rpx;"> </view>
+      </view>
+      <view class="padding-top-xs">{{item.name}}</view>
+   </navigator>
+  </view>
+</view>

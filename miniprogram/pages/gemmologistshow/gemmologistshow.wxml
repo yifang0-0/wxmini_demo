@@ -1,0 +1,16 @@
+<!--pages/gemmologistshow/gemmologistshow.wxml-->
+<!-- 顶部自定义 -->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isCustom="{{true}}"><view slot="content">鉴定师们</view></cu-custom>
+
+<!-- 鉴定师们 -->
+<view class="padding">
+  <view class="grid col-2 grid-square"> 
+    <navigator class="padding bg-white" wx:for="{{gemmologist}}" hover-class="none" url="{{item.url}}" open-type="navigate">
+      <view class="flex solid-bottom align-center">
+        <view class="cu-avatar xl round" style="{{item.img}}"></view>
+        <view class="text-shadow text-cyan padding-left-sm margin-xs">{{item.name}}</view>
+      </view>
+      <view class="padding-top text-s">可鉴定：{{item.description}}</view>
+   </navigator>
+  </view>
+</view>

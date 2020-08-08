@@ -14,7 +14,7 @@ Page({
       color:'cyan',
       badge: 1,
       name: '鉴别师',
-      url: '../gemmologist/gemmologist'
+      url: '../gemmologistshow/gemmologistshow'
     }, {
       icon: 'sort',
       color: 'cyan',
