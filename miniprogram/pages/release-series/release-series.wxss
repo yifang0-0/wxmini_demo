@@ -1,1 +1,19 @@
 
+.cu-btn {
+  width:90%;
+  color: var(--grey);
+  border-color: var(--gray);
+  overflow: visible;
+  border:1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.cu-btn:hover {
+  width:95%;
+  background-color:rgb(28,187,180);
+  border-color: var(--black);
+  color: var(--white);
+  box-shadow: black;
+  border:0px;
+
+}

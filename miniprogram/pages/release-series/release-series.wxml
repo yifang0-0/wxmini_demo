@@ -1,7 +1,22 @@
-<cu-custom bgColor="bg-black" isCustom="{{true}}"><view slot="content">选择系列</view>
+<cu-custom bgColor="bg-black" isCustom="{{true}}" id="topBarSeries"><view slot="content">选择系列</view>
 </cu-custom>
-<view class="grid col-4 ">
+<view class="grid col-4 margin-tb-{df} "  style="position:fixed;top:{{CustomBar}}px;" id="seriesLable">
   <view class="margin-tb-sm text-center" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}">
-    <button class="cu-btn  line-gray shadow">{{item.title}}</button>
+    <button class="cu-btn">{{item.title}}</button>
   </view>
 </view>
+
+<scroll-view style="position:relative;" style="position:fixed;top:{{storyHeight}}px;" >
+ <view class="margin-tb-sm " wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}">
+   <view class="cu-item arrow">
+      <view class="content">
+        <image src="/images/logo.png" class="png" mode="aspectFit"></image>
+        <text class="text-black ">{{item.text}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view> 
+
+
+
+  
