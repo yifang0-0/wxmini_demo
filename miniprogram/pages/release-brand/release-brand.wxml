@@ -1,4 +1,4 @@
-<cu-custom bgColor="bg-black" isCustom="{{true}}"><view slot="content">选择品牌</view>
+<cu-custom bgColor="bg-cyan" isCustom="{{true}}"><view slot="content">选择品牌</view>
 </cu-custom>
 <view class="cu-bar search bg-white solid-bottom" styles="margin:87px">
     <view class="cu-avatar round">

@@ -90,6 +90,56 @@
 					"id": -1,
 					"name": "pages/gemmologisthome/gemmologisthome",
 					"pathName": "pages/gemmologisthome/gemmologisthome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/sellerhome/sellerhome",
+					"pathName": "pages/sellerhome/sellerhome",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/release-final/release-final",
+					"pathName": "pages/release-final/release-final",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/page1/home/home",
+					"pathName": "pages/page1/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/myitems/myitems",
+					"pathName": "pages/myitems/myitems",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/searchID/searchID",
+					"pathName": "pages/searchID/searchID",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/pending/pending",
+					"pathName": "pages/pending/pending",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/succeed/succeed",
+					"pathName": "pages/succeed/succeed",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -1,0 +1,13 @@
+<cu-custom bgColor="bg-cyan" isCustom="{{true}}"><view slot="content">查询鉴别</view>
+</cu-custom>
+<view class="cu-bar search bg-white solid-bottom" styles="margin:87px">
+    <view class="cu-avatar round">
+        <text class="cuIcon-people line-cyan"></text>
+    </view>
+
+    <view class="search-form round">
+        <text class="cuIcon-search"></text>
+        <input type="text" placeholder="输入鉴别ID..." confirm-type="search"></input>
+    </view>
+
+</view>

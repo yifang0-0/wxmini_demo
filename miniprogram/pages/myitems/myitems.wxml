@@ -1,0 +1,87 @@
+<cu-custom bgColor="bg-cyan" isCustom="{{true}}"><view slot="content">我的鉴定</view>
+</cu-custom>
+
+  <view class="bg-white ">
+  <view class="flex solid-bottom  justify-between">
+      <view class="flex solid-bottom padding align-start">
+      <view class=" margin-xs radius"> 
+        <view class="cu-avatar xl padding"></view>
+      </view>
+      <view class=" margin-xs radius">
+        <view class="content">
+            <view class="text-cyan text-bold">
+              <text class="text-abc"></text>品牌名 系列名</view>
+        </view>
+             <view class="text-gray text-sm align-end">
+            ID：xxxxxxxxxxxxxxxxxxx
+          </view>
+              <view class="text-gray text-sm align-end ">
+            发布日期
+          </view>
+      </view>
+
+    </view>
+     <view class="flex solid-bottom padding-top align-start">
+       <view class=" margin-xs  flex-end "> 
+      <view class="cu-avatar xl ">
+      <text>绘制过程图标</text>
+      </view>
+
+    </view>
+     </view>
+  </view>
+</view>
+ 
+ 
+  <view class="bg-white ">
+  <view class="flex solid-bottom  justify-between">
+      <view class="flex solid-bottom padding align-start">
+      <view class=" margin-xs radius"> 
+        <view class="cu-avatar xl padding"></view>
+      </view>
+      <view class=" margin-xs radius">
+        <view class="content">
+            <view class="text-cyan text-bold">
+              <text class="text-abc"></text>品牌名 系列名</view>
+        </view>
+             <view class="text-gray text-sm align-end">
+            ID：xxxxxxxxxxxxxxxxxxx
+          </view>
+              <view class="text-gray text-sm align-end ">
+            发布日期
+          </view>
+      </view>
+
+    </view>
+     <view class="flex  padding" style="justify-content: center;align-items:center" >
+     <view class="cu-tag round bg-red light ">鉴定中</view>
+     </view>
+  </view>
+</view>
+ 
+   <view class="bg-white ">
+  <view class="flex solid-bottom  justify-between">
+      <view class="flex solid-bottom padding align-start">
+        <view class=" margin-xs radius"> 
+          <view class="cu-avatar xl padding"></view>
+        </view>
+        <view class=" margin-xs radius">
+          <view class="content">
+            <view class="text-cyan text-bold">
+              <text class="text-abc"></text>品牌名 系列名
+            </view>
+          </view>
+          <view class="text-gray text-sm align-end">
+            ID：xxxxxxxxxxxxxxxxxxx
+          </view>
+          <view class="text-gray text-sm align-end ">
+            发布日期
+          </view>
+        </view>
+     </view>
+
+     <view class="flex padding"  style="justify-content: center;align-items:center" >
+     <view class="cuIcon-infofill text-red margin-right-xs" >{{errormessage}}</view>
+     </view>
+  </view>
+</view>

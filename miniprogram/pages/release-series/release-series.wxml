@@ -1,22 +1,20 @@
 
-<cu-custom bgColor="bg-black"   isCustom="{{true}}" id="topBarSeries">
+<cu-custom bgColor="bg-cyan"   isCustom="{{true}}" id="topBarSeries">
   <view slot="content">选择系列</view>
 </cu-custom>
-<view class="grid col-4 margin-tb-{df} " catchtouchmove="doNothings "  id="seriesLable1">
-  <view class="margin-tb-sm text-center" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}">
+<view class="grid col-4 padding-left padding-top padding-right" catchtouchmove="doNothings "  id="seriesLable1">
+  <view class=" padding-tb-sm text-center" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}">
     <button class="cu-btn">{{item.title}}</button>
   </view>
 </view>
 
-<scroll-view class="VerticalMain" scroll-y scroll-with-animation  white-space="nowrap" float="right" style="height:{{scrollHeight}}px" bindscroll="VerticalMain" scroll-to-view="series-{{indexS}}">
- <view class="margin-tb-sm " wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}" id="series-{{indexS}}">
-   <view class="cu-item arrow">
-      <view class="content">
-        <image src="/images/logo.png" class="png" mode="aspectFit"></image>
-        <text class="text-black ">{{item.title}}</text>
+<scroll-view class="VerticalMain padding" scroll-y scroll-with-animation  white-space="nowrap" float="right" style="height:{{scrollHeight}}px" bindscroll="VerticalMain" scroll-to-view="series-{{indexS}}">
+<view class="cu-list  menu ">
+   <view class=" cu-item arrow solid-bottom padding" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}" id="series-{{indexS}}">
+      <view class="cu-avatar round lg" style="background-image:url(/images/logo.png );"></view>
+        <text class="text-black">{{item.title}}</text>
       </view>
-    </view>
-  </view>
+</view>
 </scroll-view> 
 
 

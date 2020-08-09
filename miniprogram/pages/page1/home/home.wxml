@@ -1,6 +1,6 @@
 <!--pages/page1.wxml-->
  <!-- 上端头衔 -->
-<cu-custom bgColor="bg-black" isCustom="{{true}}"><view slot="content">APP名称</view>
+<cu-custom bgColor="bg-cyan" isCustom="{{true}}"><view slot="content">APP名称</view>
  
 </cu-custom>
 <view class="cu-bar bg-cayan search radius shadow bg-white">
@@ -70,3 +70,4 @@
     </view>
   </view>
 </view>
+<view class="cu-bar"></view>

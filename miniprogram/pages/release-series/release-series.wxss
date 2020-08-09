@@ -17,3 +17,8 @@
   border:0px;
 
 }
+.cu-list.menu>.cu-item.arrow {
+padding-right: 90rpx;
+  
+  }
+  

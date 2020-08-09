@@ -1,0 +1,77 @@
+<cu-custom bgColor="bg-cyan" isCustom="{{true}}"><view slot="content">发布鉴定</view>
+</cu-custom>
+<view class="cu-list menu padding-top ">
+ <view class=" cu-item arrow solid-bottom " >
+      <view class="cu-avatar round lg " style="background-image:url(/images/logo.png );"></view>
+        <view class="text-grey">
+          <text class="text-black  ">鉴定师名称</text>
+        </view>  
+   </view>
+</view>
+  <view class="bg-white margin">
+    <view class="flex solid-bottom padding align-start">
+      <view class=" margin-xs radius"> 
+        <view class="cu-avatar xl padding"></view>
+      </view>
+      <view class=" margin-xs radius">
+        <view class="content">
+            <view class="text-cyan text-bold">
+              <text class="text-abc"></text>品牌名</view>
+        </view>
+             <view class="text-gray text-sm align-end padding-top">
+            系列名
+          </view>
+      </view>
+    </view>
+</view>
+ 
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action text-cyan text-bold">
+   上传图片（必填）
+  </view>
+     <view class="action">
+        <text>新手须知📚   ></text>    
+    </view>
+</view>
+<view class="bg-white padding">
+    <view class="grid col-4 grid-square">
+      <view class="cu-avatar round lg margin-center" wx:for="{{9}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
+    </view>
+  </view>
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action text-cyan text-bold">
+   补充图片（选填）
+  </view>
+  
+</view>
+<view class="bg-white padding">
+    <view class="grid col-4 grid-square">
+      <view class="cu-avatar round lg margin-center" wx:for="{{6}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
+      <view class="cu-avatar  solids">
+        <text class="cuIcon-roundaddfill lg"></text>
+        <!--text class="text-grey margin-top">添加照片</text>-->
+      </view>
+    </view>
+</view>
+
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action text-cyan text-bold">
+    留言（选填）
+    </view>
+  </view>
+	<view class="cu-form-group">
+		<view class="title text-grey">备注</view>
+		<input placeholder="hello~帮我看看这件宝贝吧"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">多列选择</view>
+		<picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" value="{{multiIndex}}"
+		 range="{{multiArray}}">
+			<view class="picker">
+				{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+			</view>
+		</picker>
+	</view>
+  <button class="cu-btn bg-red  margin lg" role="button" aria-disabled="false"> 提交鉴别</button>

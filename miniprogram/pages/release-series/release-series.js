@@ -87,8 +87,6 @@ Page({
       query.select('#topBarSeries').boundingClientRect();
       query.select('#seriesLable1').boundingClientRect();
 
-      
-  
       query.exec((res) => {
         // 分别取出节点的高度
         let bar = res[0].height;
