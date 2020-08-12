@@ -16,6 +16,7 @@
         </view>
       </view>
     </view>
+    
     <view class="grid flex-sub padding-lr col-4 grid-square">
       <view class="bg-img" wx:for="{{imgList}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{imgList[index]}}">
         <image src='{{imgList[index]}}' mode='aspectFill'></image>

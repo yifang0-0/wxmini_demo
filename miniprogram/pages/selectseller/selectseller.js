@@ -6,6 +6,7 @@ Page({
     CustomBar: app.globalData.CustomBar,
     hidden: true
   },
+
   onLoad() {
     let list = [];
     for (let i = 0; i < 26; i++) {
@@ -16,6 +17,7 @@ Page({
       listCur: list[0]
     })
   },
+
   onReady() {
     let that = this;
     wx.createSelectorQuery().select('.indexBar-box').boundingClientRect(function(res) {
@@ -29,6 +31,7 @@ Page({
       })
     }).exec()
   },
+
   //获取文字信息
   getCur(e) {
     this.setData({
@@ -43,6 +46,7 @@ Page({
       listCur: this.data.listCur
     })
   },
+
   //滑动选择Item
   tMove(e) {
     let y = e.touches[0].clientY,
@@ -71,6 +75,7 @@ Page({
       listCurID: this.data.listCur
     })
   },
+  
   indexSelect(e) {
     let that = this;
     let barHeight = this.data.barHeight;
@@ -86,4 +91,5 @@ Page({
       }
     }
   }
-});
+
+})

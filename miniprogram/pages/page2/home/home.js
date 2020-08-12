@@ -14,4 +14,5 @@ Page({
       scrollLeft: (e.currentTarget.dataset.id-1)*60
     })
   }
+  
 })

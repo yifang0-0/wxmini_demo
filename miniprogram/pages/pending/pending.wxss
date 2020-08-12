@@ -1,4 +1,1 @@
-/* pages/pending.wxss */
-.text-red{
-    color:red
-}
+/* pages/pending/pending.wxss */

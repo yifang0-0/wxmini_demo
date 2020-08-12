@@ -1,34 +1,26 @@
-<cu-custom bgColor="bg-cyan" isCustom="{{true}}"><view slot="content">选择品牌</view>
-</cu-custom>
-<view class="cu-bar search bg-white solid-bottom" styles="margin:87px">
-    <view class="cu-avatar round">
-        <text class="cuIcon-people line-cyan"></text>
-    </view>
+<!--pages/release-brand/release-brand.wxml-->
+<!-- 顶部自定义 -->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isCustom="{{true}}"><view slot="content">选择品牌</view></cu-custom>
 
-    <view class="search-form round">
-        <text class="cuIcon-search"></text>
-        <input type="text" placeholder="搜索品牌、商品名..." confirm-type="search"></input>
-    </view>
-    <view class="action">
-        <text>类别</text>
-        <text class="cuIcon-triangledownfill"></text>
-    </view>
-</view>
-<view class="cu-bar bg-white solid-bottom">
-  <view class="action text-cyan text-bold">
-   新品系列
+<!-- 搜索栏 -->
+<view class="cu-bar bg-white search fixed" style="top:{{CustomBar}}px;">
+  <view class="cu-avatar round">
+    <text class="cuIcon-people line-cyan"></text>
   </view>
-     <view class="action">
-        <text>更多上新系列在这里--></text>
-        
-    </view>
-</view>
-<view class="bg-white padding">
-    <view class="grid col-4 grid-square">
-      <view class="cu-avatar round lg margin-center" wx:for="{{4}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
-    </view>
+
+  <view class="search-form round">
+    <text class="cuIcon-search"></text>
+    <input type="text" placeholder="搜索品牌、商品名" confirm-type="search"></input>
   </view>
-<view class="cu-bar bg-white solid-bottom" style="height:30rpx">
+  
+  <view class="action">
+    <button class="F">搜索</button>
+  </view>
+</view>
+
+<!-- 热门品牌 -->
+<view class="cu-bar"></view>
+<view class="padding-top-xs cu-bar bg-white solid-bottom" style="height:30rpx">
   <view class="action text-cyan text-bold bottom">
    热门品牌
   </view>
@@ -38,21 +30,30 @@
     <view class="cu-tag line-black ">{{item.title}}</view>
   </view>
 </view>
+
+<!-- 品牌列表 -->
 <scroll-view scroll-y class="indexes" scroll-into-view="indexes-{{listCurID}}" style="height:calc(100vh - {{CustomBar}}px - 50px)" scroll-with-animation="true" enable-back-to-top="true">
   <block wx:for="{{list}}" wx:key>
     <view class="padding-left indexItem-{{list[index]}} text-grey" id="indexes-{{list[index]}}" data-index="{{list[index]}}">{{list[index]}}</view>
+
+    <!-- 列表 -->
     <view class="cu-list menu-avatar no-padding ">
       <view class="cu-item solid-bottom" wx:for="{{2}}" wx:key wx:for-index="sub">
-        <view class="content">
+
+        <!-- 文字 -->
+        <navigator class="content" hover-class="none" url="../release-series/release-series" open-type="navigate">
           <view class="text-black">{{list[index]}}
-            <text class="text-abc">{{list[sub]}}</text></view>
-          <view class="text-gray text-sm">
+            <text class="text-abc">{{list[sub]}}</text>
           </view>
-        </view>
+        </navigator>
+
       </view>
     </view>
+
   </block>
 </scroll-view>
+
+<!-- 右侧列表选择栏 -->
 <view class="indexBar" style="height:calc(100vh - {{CustomBar}}px - 50px)">
   <view class="indexBar-box" bindtouchstart="tStart" bindtouchend="tEnd" catchtouchmove="tMove" indicator-active-color="rgb(28,187,180)">
     <view class="indexBar-item" wx:for="{{list}}" wx:key id="{{index}}" bindtouchstart="getCur"  bindtouchend="setCur" >{{list[index]}}</view>
