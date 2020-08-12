@@ -39,6 +39,33 @@ Page({
       },    {
         title: '化妆刷',
         name: 'red'
+      },
+      {
+        title: '口红',
+        name: 'red'
+      },
+      {
+        title: '香水',
+        name: 'red'
+      },    
+      {
+        title: '防晒',
+        name: 'red'
+      },
+      {
+        title: '化妆刷',
+        name: 'red'
+      }, 
+      {
+        title: '防晒',
+        name: 'red'
+      },
+      {
+        title: '高光',
+        name: 'red'
+      },    {
+        title: '化妆刷',
+        name: 'red'
       }
     ]
   },
