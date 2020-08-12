@@ -8,7 +8,7 @@ Page({
       color: 'cyan',
       badge: 0,
       name: '查询鉴别',
-      url: '../gemmologist/gemmologist'
+      url: '../searchID/searchID'
     }, {
       icon: 'friend',
       color:'cyan',
@@ -20,7 +20,7 @@ Page({
       color: 'cyan',
       badge: 9,
       name: '我的鉴别',
-      url: '../gemmologist/gemmologist'
+      url: '../myitems/myitems'
     }, {
       icon: 'noticefill',
       color: 'olive',
@@ -89,21 +89,25 @@ Page({
       url: 'https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg'
     }]
   },
+  
   onLoad() {
     this.towerSwiper('swiperList');
     // 初始化towerSwiper 传已有的数组名即可
   },
+
   DotStyle(e) {
     this.setData({
       DotStyle: e.detail.value
     })
   },
+
   // cardSwiper
   cardSwiper(e) {
     this.setData({
       cardCur: e.detail.current
     })
   },
+
   // towerSwiper
   // 初始化towerSwiper
   towerSwiper(name) {
@@ -116,18 +120,21 @@ Page({
       swiperList: list
     })
   },
+
   // towerSwiper触摸开始
   towerStart(e) {
     this.setData({
       towerStart: e.touches[0].pageX
     })
   },
+
   // towerSwiper计算方向
   towerMove(e) {
     this.setData({
       direction: e.touches[0].pageX - this.data.towerStart > 0 ? 'right' : 'left'
     })
   },
+
   // towerSwiper计算滚动
   towerEnd(e) {
     let direction = this.data.direction;
@@ -158,4 +165,5 @@ Page({
       })
     }
   }
+
 })

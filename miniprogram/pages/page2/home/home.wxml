@@ -1,9 +1,19 @@
 <!--pages/page2.wxml-->
+<!-- 品牌 -->
 <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
   <view slot="content">
     <image src="/images/cjkz.png" mode="widthFix"></image>
   </view>
 </cu-custom>
+
+<!-- 问候 -->
+<view class="cu-bar bg-cayan search radius shadow bg-white">
+  <view class="cu-avatar round" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
+    <view class="content">早上好~~</view>
+    <view class="action">
+      <text class="cuIcon-more"></text>
+    </view>
+</view>
 
 <!-- 查询卖家 -->
 <view class="padding flex flex-direction">

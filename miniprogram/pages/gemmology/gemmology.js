@@ -40,6 +40,7 @@ Page({
     }]
   },
 
+  // 放大图片
   ViewImage(e) {
     wx.previewImage({
       urls: this.data.imgList,

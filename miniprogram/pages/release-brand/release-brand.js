@@ -1,3 +1,4 @@
+// pages/release-brand/release-brand.js
 const app = getApp();
 Page({
   data: {
@@ -25,6 +26,7 @@ Page({
       }
     ]
   },
+
   onLoad() {
     let list = [];
     for (let i = 0; i < 26; i++) {
@@ -35,6 +37,7 @@ Page({
       listCur: list[0]
     })
   },
+
   onReady() {
     let that = this;
     wx.createSelectorQuery().select('.indexBar-box').boundingClientRect(function(res) {
@@ -48,6 +51,7 @@ Page({
       })
     }).exec()
   },
+
   //获取文字信息
   getCur(e) {
     this.setData({
@@ -63,6 +67,7 @@ Page({
       
     })
   },
+
   //滑动选择Item
   tMove(e) {
     let y = e.touches[0].clientY,
@@ -91,6 +96,7 @@ Page({
       listCurID: this.data.listCur
     })
   },
+
   indexSelect(e) {
     let that = this;
     let barHeight = this.data.barHeight;
@@ -106,4 +112,5 @@ Page({
       }
     }
   }
-});
+
+})

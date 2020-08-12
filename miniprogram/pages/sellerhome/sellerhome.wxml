@@ -3,23 +3,30 @@
 <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isCustom="{{true}}"><view slot="content">卖家主页</view></cu-custom>
 
 <!-- 卖家基本信息 -->
-<view class="bg-white">
-  <view class="padding flex">
-      <!-- 头像 -->
-      <view class="cu-avatar xl round padding-sm margin-xs" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg);"></view>
+<view class="bg-white padding-sm">
+  <view class="flex solid-bottom align-center">
 
-      <text class="flex-twice padding-sm margin-xs">名字：XX海外</text>
-      <text class="flex-twice padding-sm margin-xs">平台：天猫</text>
+    <!-- 头像 -->
+    <view class="cu-avatar xl margin-sm round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big99008.jpg);"></view>
 
-      <!-- 是否关注 -->
-      <view wx:if="{{follow=='0'}}" class="flex-triple padding-sm margin-xs" bindtap="FollowChange" data-cur='1'>
+    <!-- 姓名及平台 -->
+    <view class="padding-xs">
+      <view class="basis-xs margin-xs radius">名字：XX海外</view>
+      <view class="basis-xs margin-xs radius">平台：TB</view>
+    </view>
+
+    <!-- 是否关注 -->
+    <view class="no-padding">
+      <view wx:if="{{follow=='0'}}" class="margin-xs" style="position:absolute; top:30rpx; left:72%;" bindtap="FollowChange" data-cur='1'>
         <text class="cuIcon-favorfill lg text-grey" style="font-size: 30px"></text>
-        <text>未关注</text>
+        <text> 未关注 </text>
       </view>
-      <view wx:if="{{follow=='1'}}" class="flex-triple padding-sm margin-xs" bindtap="FollowChange" data-cur='0' >
+      <view wx:if="{{follow=='1'}}" class="margin-xs" style="position:absolute; top:30rpx; left:72%;" bindtap="FollowChange" data-cur='0' >
         <text class="cuIcon-favorfill lg text-green" style="font-size: 30px"></text>
-        <text>已关注</text>
+        <text> 已关注 </text>
       </view>
+    </view>
+
   </view>
 </view>
 

@@ -1,27 +1,29 @@
 <!--pages/page1.wxml-->
- <!-- 上端头衔 -->
-<cu-custom bgColor="bg-cyan" isCustom="{{true}}"><view slot="content">APP名称</view>
- 
+ <!-- 品牌 -->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/cjkz2329.jpg">
+  <view slot="content">
+    <image src="/images/cjkz.png" mode="widthFix"></image>
+  </view>
 </cu-custom>
+
+<!-- 问候 -->
 <view class="cu-bar bg-cayan search radius shadow bg-white">
   <view class="cu-avatar round" style="background-image:url(https://image.weilanwl.com/img/square-3.jpg);"></view>
-  <view class="content">
-    早上好~~
-  </view>
-  <view class="action">
-    <text class="cuIcon-more"></text>
-  </view>
+    <view class="content">早上好~~</view>
+    <view class="action">
+      <text class="cuIcon-more"></text>
+    </view>
 </view>
 
 <!-- 发布鉴定 -->
 <view class="padding flex flex-direction">
-  <navigator class="content" hover-class="none" url="../selectseller/selectseller" open-type="navigate">
+  <navigator class="content" hover-class="none" url="../release-brand/release-brand" open-type="navigate">
     <button class="cu-btn lg">发布鉴定</button>
   </navigator>
 </view>
 
 <!-- 滚轮式广告栏 -->
- <swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="rgb(28,187,180)">
+<swiper class="card-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500" bindchange="cardSwiper" indicator-color="#8799a3" indicator-active-color="rgb(28,187,180)">
   <swiper-item wx:for="{{swiperList}}" wx:key class="{{cardCur==index?'cur':''}}">
     <view class="swiper-item">
       <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>

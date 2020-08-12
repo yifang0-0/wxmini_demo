@@ -1,77 +1,162 @@
-<cu-custom bgColor="bg-cyan" isCustom="{{true}}"><view slot="content">发布鉴定</view>
-</cu-custom>
+<!--pages/release-final/release-final.wxml-->
+<!-- 顶部自定义 -->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isCustom="{{true}}"><view slot="content">选择系列</view></cu-custom>
+
+<!-- 选择鉴定师 -->
 <view class="cu-list menu padding-top ">
- <view class=" cu-item arrow solid-bottom " >
+  <view class=" cu-item arrow solid-bottom " >
       <view class="cu-avatar round lg " style="background-image:url(/images/logo.png );"></view>
-        <view class="text-grey">
-          <text class="text-black  ">鉴定师名称</text>
-        </view>  
+      
+      <view class="action">
+        <text class="text-black" bindtap="showModal" data-target="bottomModal" >鉴定师名称</text>
+      </view>  
    </view>
 </view>
-  <view class="bg-white margin">
-    <view class="flex solid-bottom padding align-start">
-      <view class=" margin-xs radius"> 
-        <view class="cu-avatar xl padding"></view>
-      </view>
-      <view class=" margin-xs radius">
-        <view class="content">
-            <view class="text-cyan text-bold">
-              <text class="text-abc"></text>品牌名</view>
+
+<!-- 鉴定师们 -->
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white">
+      <view class="action text-green" bindtap="hideModal">确定</view>
+      <view class="action text-blue" bindtap="hideModal">取消</view>
+    </view>
+
+    <!-- 鉴定师信息 -->
+
+  </view>
+</view>
+
+<!-- 选择鉴定师2 -->
+<view class="cu-form-group margin-top">
+  <view class="title">选择鉴定师</view>
+  
+  <picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+    <view class="picker">
+      {{index?picker[index]:'禁止换行，超出容器部分会以 ... 方式截断'}}
+    </view>
+  </picker>
+</view>
+
+
+<!-- 已选择鉴定商品 -->
+<view class="bg-white margin">
+  <view class="flex solid-bottom padding align-start">
+    <!-- 鉴定商品图 -->
+    <view class=" margin-xs radius"> 
+      <view class="cu-avatar xl padding"></view>
+    </view>
+    
+    <!-- 鉴定商品品牌、系列名-->
+    <view class=" margin-xs radius">
+      <view class="content">
+        <view class="text-cyan text-bold">
+          <text class="text-abc"></text>品牌名
         </view>
-             <view class="text-gray text-sm align-end padding-top">
-            系列名
-          </view>
+      </view>
+      <view class="text-gray text-sm align-end padding-top">
+        系列名
       </view>
     </view>
+
+  </view>
 </view>
- 
+
+<!-- 必上传图片 -->
 <view class="cu-bar bg-white solid-bottom">
   <view class="action text-cyan text-bold">
    上传图片（必填）
   </view>
-     <view class="action">
-        <text>新手须知📚   ></text>    
-    </view>
-</view>
-<view class="bg-white padding">
-    <view class="grid col-4 grid-square">
-      <view class="cu-avatar round lg margin-center" wx:for="{{9}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
-    </view>
+  <view class="action">
+    <text>新手须知📚   ></text>    
   </view>
+</view>
 
-  <view class="cu-bar bg-white solid-bottom margin-top">
-  <view class="action text-cyan text-bold">
-   补充图片（选填）
+<view class="bg-white padding-top-xs padding-left padding-right">
+  <view class="grid col-4 grid-square">      
+    <view class="bg-img" wx:for="{{9}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{Must_imgList[index]}}">
+      <image src='{{Must_imgList[index]}}' mode='aspectFill'></image>
+    </view>
   </view>
-  
 </view>
-<view class="bg-white padding">
-    <view class="grid col-4 grid-square">
-      <view class="cu-avatar round lg margin-center" wx:for="{{6}}" wx:key style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big1000{{index+1}}.jpg);"></view>
-      <view class="cu-avatar  solids">
-        <text class="cuIcon-roundaddfill lg"></text>
-        <!--text class="text-grey margin-top">添加照片</text>-->
+
+
+<!-- 可选上传图片 -->
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action text-cyan text-bold">
+    补充图片（选填）
+  </view>
+</view>
+
+<view class="bg-white padding-top-xs padding-left padding-right">
+  <view class="grid col-4 grid-square">
+    <view class="bg-img" wx:for="{{3}}" wx:key="{{index}}" bindtap="ViewImage" data-url="{{Chosen_imgList[index]}}">
+			<image src='{{Chosen_imgList[index]}}' mode='aspectFill'></image>
+			<view class="cu-tag bg-red" catchtap="DelImg" data-index="{{index}}">
+				<text class="cuIcon-close"></text>
+			</view>
+		</view>
+		
+    <view class="solids" bindtap="ChooseImage">
+			<text class="cuIcon-cameraadd">待添加</text>
+		</view>
+
+  </view>
+</view>
+
+
+<!-- 用户备注 -->
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action text-cyan text-bold">
+    备注（选填）
+  </view>
+</view>
+
+<view class="cu-form-group">
+	<view class="title text-grey">备注</view>
+		<input placeholder="hello~帮我看看这件宝贝吧"></input>
+</view>
+
+
+<!-- 选择卖家 -->
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action text-cyan text-bold">
+    选择卖家，获得优惠券
+  </view>
+</view>
+
+<view class="cu-form-group">
+	<view class="title">卖家名字</view>
+	
+  <picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+		<view class="picker">{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+		</view>
+	</picker>
+</view>
+
+<!-- 提交鉴别 -->
+<button class="action cu-btn bg-red margin lg" bindtap="showModal" data-target="DialogModal1" role="button" aria-disabled="false">提交鉴别</button>
+
+<!-- 确定提交吗？ -->
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">确认</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
       </view>
     </view>
-</view>
-
-  <view class="cu-bar bg-white solid-bottom margin-top">
-    <view class="action text-cyan text-bold">
-    留言（选填）
+   
+    <view class="padding-xl">
+      确认发布鉴定码？
     </view>
+   
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="hideModal">确定</button>
+      </view>
+    </view>
+    
   </view>
-	<view class="cu-form-group">
-		<view class="title text-grey">备注</view>
-		<input placeholder="hello~帮我看看这件宝贝吧"></input>
-	</view>
-
-	<view class="cu-form-group">
-		<view class="title">多列选择</view>
-		<picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" value="{{multiIndex}}"
-		 range="{{multiArray}}">
-			<view class="picker">
-				{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
-			</view>
-		</picker>
-	</view>
-  <button class="cu-btn bg-red  margin lg" role="button" aria-disabled="false"> 提交鉴别</button>
+</view>

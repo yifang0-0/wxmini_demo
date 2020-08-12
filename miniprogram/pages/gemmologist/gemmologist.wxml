@@ -8,7 +8,7 @@
       开始鉴定
     </view>
     <view class="cu-item flex-sub {{1==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="1">
-      历史鉴定
+      已完成鉴定
     </view>
     <view class="cu-item flex-sub {{2==TabCur?'text-orange cur':''}}" bindtap="tabSelect" data-id="2">
       鉴定中
@@ -32,24 +32,32 @@
   <text class="text-black text-lg">最早订单时间:</text>
 </view>
 
-<!-- 历史鉴定内容 -->
+<!-- 已完成鉴定内容 -->
 <view wx:if="{{TabCur=='1'}}" class="cu-list menu-avatar">
   <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{4}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
-    <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view>
-    <navigator class="content" hover-class="none" url="../selectseller/selectseller" open-type="navigate">
-      <view class="text-grey">鉴品{{index}}</view>
-      <view class="text-gray text-sm">
-        <text class="text-red"></text> abc</view>
+
+    <!-- 鉴定品头像 -->
+    <view class="cu-avatar radius round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view>
+    
+    <navigator class="content" hover-class="none" url="../succeed/succeed" open-type="navigate">
+      <view class="text-grey">品牌名/系列名</view>
+      <view class="text-gray text-sm">发布日期：</view>
     </navigator>
+    
+    <!-- 鉴定结果标签 -->
     <view class="action">
-      <view class="text-red text-xs">真</view>
+      <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);">真假</view>
     </view>
+
+    <!-- 重置结果 -->
     <view class="move">
       <view class="bg-red" bindtap="showModal" data-target="DialogModal" style="border-radius:0px">重置</view>
     </view>
+
   </view>
 </view>
 
+<!-- 重置结果弹窗 -->
 <view class="cu-modal {{modalName=='DialogModal'?'show':''}}">
   <view class="cu-dialog">
     <view class="cu-bar bg-white justify-end">
@@ -72,27 +80,50 @@
 
 <!-- 鉴定中内容 -->
 <view wx:if="{{TabCur=='2'}}" class="cu-list menu-avatar">
-  <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{4}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
-    <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view>
-    <navigator class="content" hover-class="none" url="../selectseller/selectseller" open-type="navigate">
-      <view class="text-grey">鉴品{{index}}</view>
-      <view class="text-gray text-sm">
-        <text class="text-red"></text> abc</view>
+  <view class="cu-item">
+
+    <!-- 鉴定品头像 -->
+    <view class="cu-avatar radius round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg);"></view>
+
+    <navigator class="content" hover-class="none" url="../pending/pending" open-type="navigate">
+      <view class="text-grey">品牌名/系列名</view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">
+					<text class="cuIcon-infofill text-red  margin-right-xs"></text>发布日期：
+        </text>
+      </view>
     </navigator>
+
+    <!-- 鉴定结果标签 -->
     <view class="action">
-      <view class="text-grey text-xs">鉴定ing</view>
+      <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);">真假</view>
     </view>
+
   </view>
 </view>
 
 <!-- 待回复鉴定内容 -->
 <view wx:if="{{TabCur=='3'}}" class="cu-list menu-avatar">
-  <view class="cu-item {{modalName=='move-box-'+ index?'move-cur':''}}" wx:for="{{4}}" wx:key bindtouchstart="ListTouchStart" bindtouchmove="ListTouchMove" bindtouchend="ListTouchEnd" data-target="move-box-{{index}}">
-    <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);"></view>
-    <navigator class="content" hover-class="none" url="../selectseller/selectseller" open-type="navigate">
-      <view class="text-grey">鉴品{{index}}</view>
-      <view class="text-gray text-sm">
-        <text class="cuIcon-infofill text-red"></text> 待回复用户</view>
+  <view class="cu-item">
+
+    <!-- 鉴定品头像 -->
+    <view class="cu-avatar radius round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Taric.png);">
+      <view class="cu-tag badge">99+</view>
+    </view>
+
+    <navigator class="content" hover-class="none" url="../succeed/succeed" open-type="navigate">
+      <view class="text-grey">
+        <text class="text-cut">品牌名/系列名</text>
+      </view>
+      <view class="text-gray text-sm flex">
+        <text class="text-cut">发布日期：</text>
+      </view>
     </navigator>
+
+    <!-- 鉴定结果标签 -->
+    <view class="action">
+      <view class="cu-avatar round lg" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big2100{{index+1}}.jpg);">真假</view>
+    </view>
+    
   </view>
 </view>
