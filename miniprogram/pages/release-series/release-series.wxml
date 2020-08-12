@@ -2,7 +2,7 @@
 <cu-custom bgColor="bg-cyan"   isCustom="{{true}}" id="topBarSeries">
   <view slot="content">选择系列</view>
 </cu-custom>
-<view class="grid col-4 padding-left padding-top padding-right" catchtouchmove="doNothings "  id="seriesLable1">
+<view class="grid col-4 padding-left padding-top padding-right bg-white" catchtouchmove="doNothings "  id="seriesLable1">
   <view class=" padding-tb-sm text-center" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}">
     <button class="cu-btn">{{item.title}}</button>
   </view>
@@ -11,7 +11,7 @@
 <scroll-view class="VerticalMain padding" scroll-y scroll-with-animation  white-space="nowrap" float="right" style="height:{{scrollHeight}}px" bindscroll="VerticalMain" scroll-to-view="series-{{indexS}}">
 <view class="cu-list  menu ">
    <view class=" cu-item arrow solid-bottom padding" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}" id="series-{{indexS}}">
-      <view class="cu-avatar round lg" style="background-image:url(/images/logo.png );"></view>
+      <view class=" cu-avatar lg " style="background-image:url(/images/logo.png );"></view>
         <text class="text-black">{{item.title}}</text>
       </view>
 </view>
