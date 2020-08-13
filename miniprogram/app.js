@@ -15,11 +15,13 @@ App({
 			this.globalData.CustomBar = capsule.bottom + capsule.top - e.statusBarHeight;
 		} else {
 			this.globalData.CustomBar = e.statusBarHeight + 50;
-		}
+    }
+    this.globalData.CustomBar+= this.globalData.StatusBar;
       }
     })
   },
   globalData: {
+   
     ColorList: [{
         title: '嫣红',
         name: 'red',
