@@ -1,20 +1,22 @@
+<!--pages/release-series/release-series-->
+<!-- 顶部自定义 -->
+<cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" isCustom="{{true}}"><view slot="content">选择系列</view></cu-custom>
 
-<cu-custom bgColor="bg-cyan"   isCustom="{{true}}" id="topBarSeries">
-  <view slot="content">选择系列</view>
-</cu-custom>
-<view class="grid col-4 padding-left padding-top padding-right bg-white" catchtouchmove="doNothings "  id="seriesLable1">
+<!-- 系列们 -->
+<view class="grid col-4 padding-left padding-top padding-right" catchtouchmove="doNothings "  id="seriesLable1">
   <view class=" padding-tb-sm text-center" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}">
     <button class="cu-btn">{{item.title}}</button>
   </view>
 </view>
 
+<!-- 系列列表 -->
 <scroll-view class="VerticalMain padding" scroll-y scroll-with-animation  white-space="nowrap" float="right" style="height:{{scrollHeight}}px" bindscroll="VerticalMain" scroll-to-view="series-{{indexS}}">
-<view class="cu-list  menu ">
-   <view class=" cu-item arrow solid-bottom padding" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}" id="series-{{indexS}}">
-      <view class=" cu-avatar lg " style="background-image:url(/images/logo.png );"></view>
-        <text class="text-black">{{item.title}}</text>
-      </view>
-</view>
+  <view class="cu-list  menu">
+    <navigator class=" cu-item arrow solid-bottom padding" wx:for="{{SeriesList}}" wx:key wx:if="{{item.name!='null'}}" id="series-{{indexS}}" hover-class="none" url="../release-final/release-final" open-type="navigate">
+      <view class="cu-avatar radius lg" style="background-image:url(/images/logo.png);"></view>
+      <text class="text-black">{{item.title}}</text>
+    </navigator>
+  </view>
 </scroll-view> 
 
 

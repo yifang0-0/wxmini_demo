@@ -3,7 +3,7 @@
 <cu-custom bgImage="https://image.weilanwl.com/color2.0/plugin/sylb2244.jpg" class="nav fixed" isCustom="{{true}}"><view slot="content">鉴定商品</view></cu-custom>
 
 <!-- 用户的图 -->
-<view class="cu-card dynamic no-card">
+<view class="cu-card dynamic no-card" style="margin-top:50rpx;">
   <view class="cu-item shadow">
     <view class="cu-list menu-avatar">
       <view class="cu-item">
